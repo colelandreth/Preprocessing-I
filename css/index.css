@@ -133,23 +133,155 @@ table {
 html,
 body {
   height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.widthPadding {
+  width: 50%;
+  padding: 3%;
+}
+.widthPaddingMobile {
+  width: auto;
+  padding: 3%;
+}
+.flexDisplay {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .flexDisplay {
+    display: grid;
+  }
 }
 html {
   background-color: #687682;
+  font-size: 1.1em;
+  text-align: center;
 }
 html body {
-  width: 70%;
+  width: 80%;
   height: auto;
   margin: 3% auto;
   background-color: #EDEDF4;
+  padding: 1%;
+  border-radius: 20px;
+}
+html body h2 {
+  color: #937D5A;
+  font-size: 2em;
 }
 nav {
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 nav a {
   color: #937D5A;
   text-decoration: none;
   padding: 1%;
+}
+header {
+  padding: 5%;
+  background-color: white;
+  display: flex;
+  border-radius: 25px;
+}
+@media (max-width: 500px) {
+  header {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header img {
+    margin: auto;
+  }
+  header div {
+    padding-left: 1px;
+  }
+}
+header img {
+  width: 50%;
+  height: auto;
+}
+header div {
+  padding-left: 2%;
+}
+header h1 {
+  font-size: 2.3em;
+  padding-bottom: 3%;
+}
+header h3 {
+  font-size: 1.7em;
+  padding-bottom: 3%;
+}
+header p {
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-size: 1.2em;
+}
+header button {
+  width: 300px;
+  padding: 2%;
+  font-size: 1em;
+  background-color: #EDEDF4;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.about {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .about {
+    display: grid;
+  }
+}
+.about .aboutMe,
+.about .skills {
+  width: 50%;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  .about .aboutMe,
+  .about .skills {
+    width: auto;
+    padding: 3%;
+  }
+}
+.about p {
+  margin-top: 3%;
+  padding-top: 3%;
+}
+.about .skills ul {
+  padding: 3%;
+  margin: 1%;
+  border: 1px solid #687682;
+}
+li {
+  list-style: none;
+  padding: 3%;
+}
+.bottomSection {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .bottomSection {
+    display: grid;
+  }
+}
+.bottomSection h2,
+.bottomSection p {
+  padding: 3%;
+}
+.bottomSection .work,
+.bottomSection .contact {
+  width: 50%;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  .bottomSection .work,
+  .bottomSection .contact {
+    width: auto;
+    padding: 3%;
+  }
+}
+.bottomSection .work ul,
+.bottomSection .contact ul {
+  padding-bottom: 3%;
 }

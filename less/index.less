@@ -55,6 +55,7 @@ table {
 
 html, body {
 	height: 100%;
+	font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -64,26 +65,162 @@ html, body {
 @backgroundColor: #687682; 
 @innerColor: #EDEDF4;
 @textColor: #937D5A;
+@buttonColor: #EDEDF4;
+@bottomPadding: 3%;
+@align: center;
 
+.widthPadding {
+	width: 50%;
+	padding: @bottomPadding;
+}
+
+.widthPaddingMobile {
+	width: auto;
+	padding: @bottomPadding;
+}
+
+.flexDisplay {
+	display: flex;
+
+		@media (max-width: 500px) {
+			display: grid;
+		}
+}
 
 html {
 	background-color: @backgroundColor;
-
+	font-size: 1.1em;
+	text-align: center;
 		body {
-			width: 70%;
+			width: 80%;
 			height: auto;
 			margin: 3% auto;
 			background-color: @innerColor;
+			padding: 1%;
+			border-radius: 20px;
+
+			h2 {
+				color: @textColor;
+				font-size: 2em;
+			}
+
+
 		}
 }
 
 nav {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 		a {
 			color: @textColor;
 			text-decoration: none;
 			padding: 1%;
 		}
+}
+
+header {
+	padding: 5%;
+	background-color: white;
+	display: flex;
+	border-radius: 25px;
+
+		@media (max-width:500px) {
+			flex-wrap: wrap;	
+			width: 100%;
+				img{
+					margin: auto;
+				}
+
+				div {
+					padding-left: 1px;
+				}
+		}
+
+		img{
+			width: 50%;
+			height: auto;
+		}
+
+		div {
+			padding-left: 2%;
+		}
+
+		h1{
+			font-size: 2.3em;
+			padding-bottom: @bottomPadding;
+		}
+
+		h3 {
+			font-size: 1.7em;
+			padding-bottom: @bottomPadding;
+		}
+
+		p {
+			padding-bottom: 5%;
+			padding-top: 5%;
+			font-size: 1.2em;
+		}
+
+		button {
+			width: 300px;
+			padding: 2%;
+			font-size: 1em;
+			background-color: @buttonColor;
+			border: 1px solid black;
+			border-radius: 15px;
+		}
+}
+
+
+
+.about {
+	.flexDisplay();
+
+		.aboutMe, .skills {
+			.widthPadding();
+
+			@media (max-width: 500px){
+				.widthPaddingMobile();
+			}
+		}
+
+		p {
+			margin-top: @bottomPadding;
+			padding-top: @bottomPadding;
+		}
+
+		.skills {
+			ul {
+				padding: @bottomPadding;
+				margin: 1%;
+				border: 1px solid @backgroundColor;
+			}
+		}
+
+}
+
+li {
+	list-style: none;
+	padding: @bottomPadding;
+}
+
+.bottomSection {
+	.flexDisplay();
+
+	h2, p {
+		padding: @bottomPadding;
+	}
+
+	.work, .contact {
+		.widthPadding();
+
+		@media (max-width: 500px){
+			.widthPaddingMobile();
+		}
+
+		ul {
+			padding-bottom: @bottomPadding;
+		}
+	}
 }
